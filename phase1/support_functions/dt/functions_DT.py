@@ -1,6 +1,8 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import joblib
+
 from sklearn.metrics import (
     accuracy_score,
     balanced_accuracy_score,
@@ -65,6 +67,18 @@ def dt_report(
     output_report_name = f"{output_reference}.csv"
     output_root = f"{local_root}/results/trained_results/models_reports"
     report.to_csv(os.path.join(output_root, output_report_name), sep=",")
+    print(f"model {output_reference} saved")
+
+
+def save_model(
+    model,
+    output_reference: str,
+    local_root: str,
+):
+    trained_model_root = f"{local_root}/results/trained_results/trained_models"
+    output_model_name = f"{output_reference}.pkl"
+    joblib.dump(model, os.path.join(trained_model_root, output_model_name))
+    print(f"model {output_reference} saved")
 
 
 def plot_tree(model, descriptors, local_root, output_reference):
@@ -88,5 +102,4 @@ def plot_tree(model, descriptors, local_root, output_reference):
     output_reference = f"{output_reference}_tree.png"
     graph.write_png(os.path.join(output_root, output_reference))
     Image(graph.create_png())
-
-    # TODO train datasets with numerical descriptors
+    print("tree image saved")
