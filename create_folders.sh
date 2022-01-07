@@ -14,5 +14,6 @@ mkdir -p \
     ${PHASE}/results/trained_results/{id_models,trained_models}\
     ${PHASE}/results/trained_results/models_reports/coeff_reports\
     ${PHASE}/results/trained_results/roc_plot/roc_data\
+    ${PHASE}/results/trained_results/tree_plot
 
 done
