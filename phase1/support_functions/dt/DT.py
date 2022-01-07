@@ -1,13 +1,12 @@
 import os
 import pandas as pd
 import numpy as np
-import joblib
 from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 
-from phase1.support_functions.dt.functions_DT import plot_roc, dt_report, plot_tree
+from phase1.support_functions.dt.functions_DT import plot_roc, dt_report, plot_tree, save_model
 
 # representative descriptors
 custom_descriptors = [
@@ -135,7 +134,4 @@ class DT:
             attributes=self.get_attributes(model),
             local_root=self.local_root,
         )
-        trained_model_root = f"{self.local_root}/results/trained_results/trained_models"
-        output_model_name = f"{output_reference}.pkl"
-        joblib.dump(model, os.path.join(trained_model_root, output_model_name))
-        return f"report {output_reference} is ready"
+        save_model(model, output_reference, self.local_root)
