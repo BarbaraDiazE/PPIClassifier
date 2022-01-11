@@ -13,4 +13,4 @@ F1,0.93
 ROC AUC score,0.93
 Confusion matrix,"[[676  60]
  [ 33 620]]"
-recall,0.95
+Recall,0.95

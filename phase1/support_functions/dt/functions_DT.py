@@ -11,6 +11,7 @@ from sklearn.metrics import (
     roc_auc_score,
     plot_roc_curve,
     confusion_matrix,
+    recall_score,
 )
 
 
@@ -62,6 +63,7 @@ def dt_report(
         "ROC AUC score": round(roc_auc_score(y_test, predictions), 2),
         # "AUC": round(roc_auc, 2),
         "Confusion matrix": confusion_matrix(y_test, predictions),
+        "Recall": round(recall_score(y_test, predictions), 2),
     }
     report = pd.DataFrame.from_dict(report_data, orient="index", columns=["value"])
     output_report_name = f"{output_reference}.csv"

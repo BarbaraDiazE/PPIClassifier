@@ -60,7 +60,7 @@ def rf_report(
         "F1": round(f1_score(y_test, predictions), 2),
         "ROC AUC score": round(roc_auc_score(y_test, predictions), 2),
         "Confusion matrix": confusion_matrix(y_test, predictions),
-        "recall": round(recall_score(y_test, predictions), 2),
+        "Recall": round(recall_score(y_test, predictions), 2),
     }
     report = pd.DataFrame.from_dict(report_data, orient="index", columns=["value"])
     output_report_name = f"{output_reference}.csv"
