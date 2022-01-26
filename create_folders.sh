@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PHASES=(
-    phase1
+    phase30
 )
 for PHASE in "${PHASES[@]}"
 do
