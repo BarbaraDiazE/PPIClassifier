@@ -1,0 +1,71 @@
+,ID,Accuracy,Balanced accuracy,Precision,Recall,Confusion matrix,Model information
+0,RF3,0.96,0.96,0.97,0.94,"[481 12]                                                                                                                                                                                                                                                                                                                            
+[ 27 406]","        model_name: RFF1L6P3EN2A,
+        descriptors: ECFP4,
+        proportion: 0.2,
+        estimators: 500,
+        criterion: entropy,
+        libraries: PPI and FDA
+        class weight: balanced"
+1,RF4,0.96,0.96,0.98,0.94,"[483 10]                                                                                                                                                                                                                                                                                                                         
+[ 28 405]","        model_name: RFF1L6P3EN2B,
+        descriptors: ECFP4,
+        proportion: 0.2,
+        estimators: 500,
+        criterion: entropy,
+        libraries: PPI and FDA,
+        class weight: None
+   "
+2,RF9,0.96,0.96,0.95,0.94,"[480 13]                                                                                                                                                                                                                                                                                                                         
+[ 26 407]","        model_name: RFF1L6P3GN2A,
+        descriptors: ECFP4,
+        proportion: 0.2,
+        estimators: 500,
+        criterion: gini,
+        libraries: PPI and FDA,
+        class weight: balanced
+    "
+3,LRG3,0.94,0.94,0.95,0.93,"[470 23]                                                                                                                                                                                                                                                                                                                         
+[ 29 404]","        model_name: LRGF1L6P3S2B,
+        descriptors: ECFP4,
+        proportion: 0.2,
+        solver_keys: lbfgs,
+        libraries: PPI and FDA,
+        class weight: None"
+4,LRG4,0.94,0.94,0.95,0.94,"[470 23]                                                                                                                                                                                                                                                                                                                         
+[ 29 404]","        model_name: LRGF1L6P3S2B,
+        descriptors: ECFP4,
+        proportion: 0.2,
+        solver_keys: bfgs,
+        libraries: PPI and FDA,
+        class weight: None
+  "
+5,LRG9,0.95,0.95,0.94,0.94,"[469 24]                                                                                                                                                                                                                                                                                                                         
+[ 25 408]","        model_name: LRGF1L6P3S5A,
+        descriptors: ECFP4,
+        proportion: 0.2,
+        solver_keys: saga,
+        libraries: PPI and FDA,
+        class weight: balanced"
+5,SVM6,0.95,0.95,0.98,0.92,"[485    8]                                                                                                                                                                                                                                                                                                                                
+[ 36 397]","        model_name: SVMF1L6P3K3B,
+        descriptor: ECFP4,
+        proportion: 0.2,
+        kernel: rbf,
+        libraries: PPI and FDA,
+        class weight: None
+"
+7,SVM7,0.94,0.94,0.95,0.93,"[473   20]                                                                                                                                                                                                                                                                                                                                
+[ 38 395]","        model_name: SVMF1L6P3K4A,
+        descriptor: ECFP4,
+        proportion: 0.2,
+        kernel: sigmoid,
+        libraries: PPI and FDA,
+        class weight: balanced"
+8,SVM21,0.95,0.95,0.98,0.95,"[486    7]                                                                                                                                                                                                                                                                                                                                
+[ 33 400]","        model_name: SVMF2L6P3K3A,
+        descriptor: ECFP6,
+        proportion: 0.2,
+        kernel: rbf,
+        libraries: PPI and FDA,
+        class weight: balanced"
