@@ -58,7 +58,7 @@ class Ensemble:
             (
                 "rf3",
                 RandomForestClassifier(
-                    estimators=500,
+                    n_estimators=500,
                     criterion="entropy",
                     class_weight="balanced",
                     random_state=1992,
@@ -67,7 +67,7 @@ class Ensemble:
             (
                 "rf4",
                 RandomForestClassifier(
-                    estimators=500,
+                    n_estimators=500,
                     criterion="entropy",
                     class_weight=None,
                     random_state=1992,
@@ -76,7 +76,7 @@ class Ensemble:
             (
                 "rf9",
                 RandomForestClassifier(
-                    estimators=500,
+                    n_estimators=500,
                     criterion="gini",
                     class_weight="balanced",
                     random_state=1992,
@@ -106,6 +106,7 @@ class Ensemble:
                     kernel="rbf",
                     class_weight=None,
                     random_state=1992,
+                    probability=True,
                 ),
             ),
             (
@@ -114,6 +115,7 @@ class Ensemble:
                     kernel="sigmoid",
                     class_weight=None,
                     random_state=1992,
+                    probability=True,
                 ),
             ),
         ]
@@ -137,8 +139,8 @@ class Ensemble:
         }
         return prediction_data
 
-    def report(self, solver: str, output_reference: str):
-        ensemble, x_test, y_test = self.train_model(solver)
+    def report(self, output_reference: str):
+        ensemble, x_test, y_test = self.train_model()
         print("report method")
         prediction_data = self.get_predictions(ensemble, x_test, y_test)
         ensemble_report(
@@ -147,7 +149,7 @@ class Ensemble:
             y_test=prediction_data["y_test"],
             predictions=prediction_data["predictions"],
             descriptors=self.descriptors,
-            root=self.root,
+            local_root=self.root,
         )
         save_ensemble(ensemble, output_reference, self.root)
 
@@ -160,10 +162,10 @@ if __name__ == "__main__":
     descriptor_list = get_numerical_descriptors(input_filename)
     E = Ensemble(
         data_root=local_root["data"],
-        local_root=local_root["phase1"],
+        root=local_root["phase1"],
         input_file=input_filename,
         target="PPI",
         descriptors=descriptor_list,
         fraction=0.2,
     )
-    E.report(solver="newton-cg", output_reference="ensemble")
+    E.report(output_reference="ensemble1")

@@ -43,12 +43,9 @@ def plot_roc(output_ref, y_test, y_score, local_root) -> float:
 def ensemble_report(
     output_reference: str,
     data: pd.DataFrame,
-    # parameters: dict,
     y_test: np.array,
     predictions: np.array,
     descriptors,
-    # attributes: dict,
-    # roc_auc,
     local_root,
 ):
     report_data = {
@@ -64,9 +61,9 @@ def ensemble_report(
         "Recall": round(recall_score(y_test, predictions), 2),
     }
     report = pd.DataFrame.from_dict(report_data, orient="index", columns=["value"])
-    f"{output_reference}.csv"
-    f"{local_root}/results/trained_results/models_reports"
-    # report.to_csv(os.path.join(output_root, output_report_name), sep=",")
+    output_report_name = f"{output_reference}.csv"
+    output_root = f"{local_root}/results/trained_results/models_reports"
+    report.to_csv(os.path.join(output_root, output_report_name), sep=",")
     print(report)
     print(f"report {output_reference} is ready")
 
@@ -79,4 +76,4 @@ def save_ensemble(
     trained_model_root = f"{local_root}/results/trained_results/trained_models"
     output_model_name = f"{output_reference}.pkl"
     joblib.dump(ensemble, os.path.join(trained_model_root, output_model_name))
-    print(f"ensemble {output_reference} saved")
+    print(f"ensemble: {output_reference} has been saved")
