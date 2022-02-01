@@ -1,0 +1,17 @@
+,value
+Method,DT
+Class weight,
+Max depth,5
+Libraries,PPI FDA
+Test fraction,30.0
+Descriptors,HallKierAlpha VSA_EState7 MinEStateIndex FractionCSP3 NumAromaticHeterocycles NumHAcceptors NumRotatableBonds NumRotatableBonds NumHeteroatoms HeavyAtomMolWt
+feature_importance,"[0.57557013 0.         0.05326096 0.03139617 0.01672287 0.15072852
+ 0.         0.         0.01760186 0.15471949]"
+Accuracy,0.83
+Balanced Accuracy,0.83
+Precision,0.81
+F1,0.82
+ROC AUC score,0.83
+Confusion matrix,"[[606 130]
+ [113 540]]"
+Recall,0.83

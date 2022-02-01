@@ -1,0 +1,66 @@
+{
+    "DT1": {
+        "model_name": "DTD1L6P3EA",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.2,
+        "criterion": "entropy",
+        "libraries": "PPI and FDA",
+        "class weight": "balanced"
+    },
+    "DT2": {
+        "model_name": "DTD1L6P3EB",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.2,
+        "criterion": "entropy",
+        "libraries": "PPI and FDA",
+        "class weight": "None"
+    },
+    "DT3": {
+        "model_name": "DTD1L6P3GA",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.2,
+        "criterion": "gini",
+        "libraries": "PPI and FDA",
+        "class weight": "balanced"
+    },
+    "DT4": {
+        "model_name": "DTD1L6P3GB",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.2,
+        "criterion": "gini",
+        "libraries": "PPI and FDA",
+        "class weight": "None"
+    },
+    "DT5": {
+        "model_name": "DTD1L6P5EA",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.3,
+        "criterion": "entropy",
+        "libraries": "PPI and FDA",
+        "class weight": "balanced"
+    },
+    "DT6": {
+        "model_name": "DTD1L6P5EB",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.3,
+        "criterion": "entropy",
+        "libraries": "PPI and FDA",
+        "class weight": "None"
+    },
+    "DT7": {
+        "model_name": "DTD1L6P5GA",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.3,
+        "criterion": "gini",
+        "libraries": "PPI and FDA",
+        "class weight": "balanced"
+    },
+    "DT8": {
+        "model_name": "DTD1L6P5GB",
+        "descriptors": "Physicochemical descriptors",
+        "proportion": 0.3,
+        "criterion": "gini",
+        "libraries": "PPI and FDA",
+        "class weight": "None"
+    }
+}
