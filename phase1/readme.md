@@ -2,7 +2,7 @@
 
 ## Train models
 
-#### Train Desition Tree
+#### Train Decision Tree
 
 `python driver_code/train_DT.py`
 
@@ -42,7 +42,7 @@
 
 `python driver_code/metrics/model_filtering.py`
 
-#### Plot headmap of models with bests performance to make easier models selection
+#### Plot heatmap of models with bests performance to make easier models selection
 
 `python driver_code/metrics/headmap_plot.py`
 
