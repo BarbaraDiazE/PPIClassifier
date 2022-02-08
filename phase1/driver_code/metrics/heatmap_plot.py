@@ -77,7 +77,8 @@ class PlotHeatmap:
         cbar.ax.tick_params(labelsize=13)
         plt.tight_layout(h_pad=0.9)
         output_root = f"{self.local_root}/results/metrics_results/metrics_plots"
-        output_figure = f"heatmap_{self.algorithm}_{self.quartile}.tiff"
+        # output_figure = f"heatmap_{self.algorithm}_{self.quartile}.tiff"
+        output_figure = f"heatmap_{self.algorithm}_{self.quartile}.png"
         plt.savefig(
             os.path.join(output_root, output_figure),
             # dpi=200,

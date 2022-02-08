@@ -96,7 +96,7 @@ def svm_report(
             "probB": round(attributes["probB"], 2),
             "Accuracy": round(accuracy_score(y_test, predictions), 2),
             "Balanced Accuracy": round(balanced_accuracy_score(y_test, predictions), 2),
-            "Precision": precision_score(y_test, predictions),
+            "Precision": round(precision_score(y_test, predictions), 2),
             "F1": round(f1_score(y_test, predictions), 2),
             "ROC AUC score": round(roc_auc_score(y_test, predictions), 2),
             "AUC": round(roc_auc, 2),
