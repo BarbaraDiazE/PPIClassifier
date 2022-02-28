@@ -56,15 +56,6 @@ class Ensemble:
 
         models = [
             (
-                "rf3",
-                RandomForestClassifier(
-                    n_estimators=500,
-                    criterion="entropy",
-                    class_weight="balanced",
-                    random_state=1992,
-                ),
-            ),
-            (
                 "rf4",
                 RandomForestClassifier(
                     n_estimators=500,
@@ -83,9 +74,9 @@ class Ensemble:
                 ),
             ),
             (
-                "lr3",
+                "lr1",
                 LogisticRegression(
-                    solver="lbfgs", fit_intercept=True, class_weight=None, random_state=1992
+                    solver="newton-cg", fit_intercept=True, class_weight=None, random_state=1992
                 ),
             ),
             (
