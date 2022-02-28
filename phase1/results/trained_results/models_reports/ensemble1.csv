@@ -7,6 +7,6 @@ Balanced Accuracy,0.95
 Precision,0.96
 F1,0.95
 ROC AUC score,0.95
-Confusion matrix,"[[476  17]
+Confusion matrix,"[[475  18]
  [ 27 406]]"
 Recall,0.94

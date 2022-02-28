@@ -1,0 +1,7 @@
+{
+      "venetoclax" : "CC1(C)CCC(CN2CCN(CC2)C2=CC=C(C(=O)NS(=O)(=O)C3=CC=C(NCC4CCOCC4)C(=C3)[N+]([O-])=O)C(OC3=CN=C4NC=CC4=C3)=C2)=C(C1)C1=CC=C(Cl)C=C1",
+      "JQ1" : "CC1=C(SC2=C1C(=NC(C3=NN=C(N32)C)CC(=O)O)C4=CC=C(C=C4)Cl)C",
+      "acetaminophen" : "CC(=O)NC1=CC=C(C=C1)O",
+      "apabetalon" : "COC1=CC2=C(C(=O)N=C(N2)C2=CC(C)=C(OCCO)C(C)=C2)C(OC)=C1",
+      "idasanutline" : "COC1=CC(=CC=C1NC(=O)[C@@H]1N[C@@H](CC(C)(C)C)[C@@](C#N)([C@H]1C1=CC=CC(Cl)=C1F)C1=CC=C(Cl)C=C1F)C(O)=O"
+}
