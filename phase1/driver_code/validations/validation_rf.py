@@ -52,25 +52,12 @@ class Validation:
 if __name__ == "__main__":
     from phase1.support_functions.vars import local_root
 
-    # M1
-    models_to_validate_m1 = models_to_validate(
-        root=local_root["phase1"], id_validation="M1", algorithm="rf", quartile="Q3"
+    models_to_validate = models_to_validate(
+        root=local_root["phase1"], algorithm="rf", quartile="Q2"
     )
-    print(models_to_validate_m1)
-    for i in range(len(models_to_validate_m1)):
-        input_filename = f"dataset_{models_to_validate_m1[i][0]}.csv"
-        model_name = models_to_validate_m1[i][1]
-        A = Validation(
-            root_data=local_root["data"], data_filename=input_filename, target="PPI", fraction=0.2
-        )
-        A.evaluate_model(root=local_root["phase1"], model_filename=model_name, cv=20)
-    # M2
-    models_to_validate_m2 = models_to_validate(
-        root=local_root["phase1"], id_validation="M2", algorithm="rf", quartile="Q3"
-    )
-    for i in range(len(models_to_validate_m2)):
-        input_filename = f"dataset_{models_to_validate_m2[i][0]}.csv"
-        model_name = models_to_validate_m2[i][1]
+    for i in range(len(models_to_validate)):
+        input_filename = f"dataset_{models_to_validate[i][0]}.csv"
+        model_name = models_to_validate[i][1]
         A = Validation(
             root_data=local_root["data"], data_filename=input_filename, target="PPI", fraction=0.2
         )

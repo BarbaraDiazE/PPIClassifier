@@ -126,7 +126,7 @@ class ModelFiltering(GetReportValues):
         best_models_df = pd.DataFrame(
             data=best_models_.transpose(),
             columns=[
-                "PK model",
+                "FK model",
             ],
         )
         output_filename = f"{self.algorithm}_{self.quartile}_best_models.csv"
